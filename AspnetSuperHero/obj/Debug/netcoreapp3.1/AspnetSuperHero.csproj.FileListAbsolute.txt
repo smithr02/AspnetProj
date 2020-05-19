@@ -178,3 +178,8 @@ C:\Users\ryan_\Desktop\AspnetSuperHero\AspnetSuperHero\bin\Debug\netcoreapp3.1\r
 C:\Users\ryan_\Desktop\AspnetSuperHero\AspnetSuperHero\obj\Debug\netcoreapp3.1\AspnetSuperHero.csproj.CoreCompileInputs.cache
 C:\Users\ryan_\Desktop\AspnetSuperHero\AspnetSuperHero\obj\Debug\netcoreapp3.1\AspnetSuperHero.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ryan_\Desktop\AspnetSuperHero\AspnetSuperHero\obj\Debug\netcoreapp3.1\AspnetSuperHero.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ryan_\Desktop\AspnetSuperHero\AspnetSuperHero\obj\Debug\netcoreapp3.1\Razor\Views\SuperHeroes\Create.cshtml.g.cs
+C:\Users\ryan_\Desktop\AspnetSuperHero\AspnetSuperHero\obj\Debug\netcoreapp3.1\Razor\Views\SuperHeroes\Delete.cshtml.g.cs
+C:\Users\ryan_\Desktop\AspnetSuperHero\AspnetSuperHero\obj\Debug\netcoreapp3.1\Razor\Views\SuperHeroes\Details.cshtml.g.cs
+C:\Users\ryan_\Desktop\AspnetSuperHero\AspnetSuperHero\obj\Debug\netcoreapp3.1\Razor\Views\SuperHeroes\Edit.cshtml.g.cs
+C:\Users\ryan_\Desktop\AspnetSuperHero\AspnetSuperHero\obj\Debug\netcoreapp3.1\Razor\Views\SuperHeroes\Index.cshtml.g.cs
