@@ -65,12 +65,12 @@ namespace AspnetSuperHero.Controllers
         // POST: Hero/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, SuperHero hero)
         {
             try
             {
                 // TODO: Add update logic here
-
+                var superHeroFromDb = _context.Heros.Where(s => s.Id == id).FirstOrDefault();
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -88,12 +88,14 @@ namespace AspnetSuperHero.Controllers
         // POST: Hero/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, SuperHero hero)
         {
             try
             {
                 // TODO: Add delete logic here
-
+                
+                _context.Heros.Remove(hero);
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch
