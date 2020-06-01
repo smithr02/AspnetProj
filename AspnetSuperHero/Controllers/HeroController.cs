@@ -22,13 +22,15 @@ namespace AspnetSuperHero.Controllers
         // GET: Hero
         public ActionResult Index()
         {
-            return View();
+            var hero = _context.Heros.ToList();
+            return View(hero);
         }
 
         // GET: Hero/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var hero = _context.Heros.Where(h => h.Id == id).SingleOrDefault();
+            return View(hero);
         }
 
         // GET: Hero/Create
@@ -59,7 +61,8 @@ namespace AspnetSuperHero.Controllers
         // GET: Hero/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var hero = _context.Heros.Where(h => h.Id == id).SingleOrDefault();
+            return View(hero);
         }
 
         // POST: Hero/Edit/5
@@ -70,7 +73,14 @@ namespace AspnetSuperHero.Controllers
             try
             {
                 // TODO: Add update logic here
-                var superHeroFromDb = _context.Heros.Where(s => s.Id == id).FirstOrDefault();
+                var superHeroFromDb = _context.Heros.Where(s => s.Id == id).SingleOrDefault();
+                superHeroFromDb.Name = hero.Name;
+                superHeroFromDb.AlterEgo = hero.AlterEgo;
+                superHeroFromDb.PrimaryAbility = hero.PrimaryAbility;
+                superHeroFromDb.SecondaryAbility = hero.SecondaryAbility;
+                superHeroFromDb.CatchPhrase = hero.CatchPhrase;
+                _context.SaveChanges();
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -82,7 +92,8 @@ namespace AspnetSuperHero.Controllers
         // GET: Hero/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var hero = _context.Heros.Where(h => h.Id == id).SingleOrDefault();
+            return View(hero);
         }
 
         // POST: Hero/Delete/5
